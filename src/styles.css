@@ -970,7 +970,8 @@ body.theme-light .scroll-to-top {
 
 @media (max-width: 900px) {
   .projects { grid-template-columns: 1fr; }
-  .projects__drawer { position: static; max-height: none; overflow-y: visible; }
+  .projects__drawer { position: static; max-height: none; overflow-y: visible; margin-bottom: 20px; }
+  .project-image { height: 300px; }
   .nav { position: sticky; top: 0; }
   
   .timeline-item {
@@ -1004,4 +1005,21 @@ body.theme-light .scroll-to-top {
   .hero { padding: 60px 18px; }
   .section { padding: 22px; }
   .nav nav { gap: 8px; }
+  
+  /* Simplify projects for mobile */
+  .projects__drawer { padding: 14px; }
+  .project-image { height: 200px; margin-bottom: 12px; }
+  .projects__drawer h4 { font-size: 18px; margin-bottom: 4px; }
+  .projects__drawer .link { font-size: 14px; }
+  .projects__drawer p { font-size: 13px; line-height: 1.6; }
+  .tags { gap: 6px; }
+  .tags span { font-size: 12px; padding: 4px 8px; }
+  
+  /* Simplify timeline for mobile */
+  .timeline-item-content { padding: 10px 0 !important; }
+  .timeline__card { padding: 12px; }
+  .timeline__card h4 { font-size: 15px; margin-bottom: 4px; }
+  .experience-bullets { font-size: 12px; gap: 6px; }
+  .timeline-card-date { font-size: 12px; }
+  .timeline-date-badge { display: none; }
 }
