@@ -69,6 +69,14 @@ const base = import.meta.env.BASE_URL || "/";
 
 const projects = [
   {
+    name: "Personal Portfolio",
+    blurb: "Responsive portfolio website showcasing projects, experiences, and publications; built with React, Vite, and GSAP animations.",
+    description: "• Built a modern, responsive portfolio website using React and Vite with smooth animations powered by GSAP.\n• Implemented dark/light theme toggle with smooth transitions and accent colors.\n• Deployed on GitHub Pages with smooth scrolling, project spotlight drawer, and comprehensive experience timeline.",
+    tags: ["React", "Vite", "GSAP", "CSS", "GitHub Pages"],
+    link: "https://github.com/mahdifarro/mahdifarro.github.io",
+    image: `${base}website.png`
+  },
+  {
     name: "Churn Prediction Pipeline",
     blurb:
       "End-to-end churn ML pipeline with preprocessing, training, and evaluation; tracked in MLflow; deployed via FastAPI + Docker with CI/CD.",
@@ -138,7 +146,7 @@ const sections = [
   { id: "contact", label: "Contact" }
 ];
 
-const cvLink = "/Mahdi-Farrokhimaleki-Resume.pdf";
+const cvLink = `${base}Mahdi_Farrokhimaleki resume.pdf`;
 
 function App() {
   const heroRef = useRef(null);
@@ -146,12 +154,22 @@ function App() {
   const heroCtaRef = useRef(null);
   const [activeProject, setActiveProject] = useState(projects[0]);
   const [theme, setTheme] = useState("dark");
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   // Sync theme classes to body; default is dark, user can toggle
   useEffect(() => {
     document.body.classList.toggle("theme-light", theme === "light");
     document.body.classList.toggle("theme-dark", theme === "dark");
   }, [theme]);
+
+  // Show scroll-to-top button when scrolled past about section
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 600);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (!heroRef.current) return;
@@ -334,15 +352,15 @@ function App() {
                 <img src={activeProject.image} alt={activeProject.name} className="project-image" />
               )}
               <h4>{activeProject?.name}</h4>
+              <a className="link" href={activeProject?.link} target="_blank" rel="noreferrer">
+                View on GitHub →
+              </a>
               <p>{activeProject?.description}</p>
               <div className="tags">
                 {activeProject?.tags.map((tag) => (
                   <span key={tag}>{tag}</span>
                 ))}
               </div>
-              <a className="link" href={activeProject?.link} target="_blank" rel="noreferrer">
-                View on GitHub →
-              </a>
             </div>
             <div>
               <div className="projects__grid">
@@ -478,6 +496,18 @@ function App() {
         <span>Built with React, Vite, and GSAP.</span>
         <span>© {new Date().getFullYear()} Mahdi Farro</span>
       </footer>
+
+      {showScrollTop && (
+        <button
+          className="scroll-to-top"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="Scroll to top"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      )}
     </div>
   );
 }

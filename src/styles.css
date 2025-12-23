@@ -495,7 +495,7 @@ body.theme-light .nav {
 }
  .projects__drawer .link {
    display: inline-block;
-   margin-top: 16px;
+   margin-top: -20px;
  }
 
 .drawer__label { text-transform: uppercase; font-size: 12px; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 6px; }
@@ -936,6 +936,36 @@ body.theme-light .nav {
   gap: 12px;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  z-index: 100;
+  color: #0d0f14;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+body.theme-light .scroll-to-top {
+  background: linear-gradient(135deg, #d1d5db, #cbd5e1, #9ca3af);
+  color: #0f172a;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
 }
 
 @media (max-width: 900px) {
