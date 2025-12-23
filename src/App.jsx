@@ -75,7 +75,7 @@ const projects = [
     description: "• Built a complete ML pipeline including preprocessing, training, and evaluation using Scikit-learn.\n• Deployed the system using FastAPI and Docker, tracked experiments with MLflow.\n• Integrated CI/CD with GitHub Actions for automated testing and deployment.",
     tags: ["FastAPI", "Docker", "MLflow", "CI/CD"],
     link: "https://github.com/mahdifarro/churn-prediction",
-    image: `${base}churn_prediction_architecture.svg`
+    image: `${base}churn_prediction_architecture_whitebg.svg`
   },
   {
     name: "LLM Text Summarizer",
@@ -148,19 +148,11 @@ function App() {
   const [activeProject, setActiveProject] = useState(projects[0]);
   const [theme, setTheme] = useState("dark");
 
+  // Sync theme classes to body; default is dark, user can toggle
   useEffect(() => {
-    const applyTheme = () => {
-      const hour = new Date().getHours();
-      const next = hour >= 7 && hour < 19 ? "light" : "dark";
-      setTheme(next);
-      document.body.classList.toggle("theme-light", next === "light");
-      document.body.classList.toggle("theme-dark", next === "dark");
-    };
-
-    applyTheme();
-    const timer = setInterval(applyTheme, 5 * 60 * 1000);
-    return () => clearInterval(timer);
-  }, []);
+    document.body.classList.toggle("theme-light", theme === "light");
+    document.body.classList.toggle("theme-dark", theme === "dark");
+  }, [theme]);
 
   useEffect(() => {
     if (!heroRef.current) return;
@@ -219,7 +211,7 @@ function App() {
         <section id="hero" className="hero" ref={heroRef}>
           <div className="hero__content">
             <p className="eyebrow" ref={heroHeadlineRef}>
-              Research Assistant · ML Engineer · Software Developer
+              ML Engineer · Software Developer
             </p>
             <h1>Mahdi Farrokhimaleki</h1>
             <p className="lede">
@@ -231,13 +223,12 @@ function App() {
             <div className="hero__cta" ref={heroCtaRef}>
               <a className="btn ghost" href="#projects">View work</a>
               <a className="btn ghost" href="#contact">Get in touch</a>
-              <a className="btn" href={cvLink} download aria-label="Download CV">Download CV</a>
+              <a className="btn btn--cv" href={cvLink} download aria-label="Download CV">Download CV</a>
             </div>
           </div>
           <div className="hero__badge">
-            <span>Open to work</span>
             <span className="dot" />
-            <span>Remote / Hybrid / In-person</span>
+            <span>Open to work</span>
           </div>
         </section>
 
@@ -274,17 +265,12 @@ function App() {
                 </div>
               </div>
               <div className="skill-category">
-                <h4>Web & Backend</h4>
+                <h4>Web Development</h4>
                 <div className="pillrow">
+                  <span className="pill">React</span>
                   <span className="pill">FastAPI</span>
                   <span className="pill">REST APIs</span>
                   <span className="pill">Full-Stack Development</span>
-                </div>
-              </div>
-              <div className="skill-category">
-                <h4>Frontend</h4>
-                <div className="pillrow">
-                  <span className="pill">React</span>
                 </div>
               </div>
               <div className="skill-category">
@@ -345,7 +331,6 @@ function App() {
           <div className="section__title">Projects</div>
           <div className="projects">
             <div className="projects__drawer" aria-live="polite">
-              <div className="drawer__label">Project spotlight</div>
               {activeProject?.image && (
                 <img src={activeProject.image} alt={activeProject.name} className="project-image" />
               )}

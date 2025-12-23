@@ -1,16 +1,19 @@
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      .box { fill: rgba(124, 245, 255, 0.2); stroke: #7cf5ff; stroke-width: 2; }
-      .box-text { fill: #f6f9ff; font-family: "Plus Jakarta Sans", sans-serif; font-size: 14px; font-weight: 500; }
-      .label-text { fill: #a8b3c7; font-family: "Plus Jakarta Sans", sans-serif; font-size: 12px; }
-      .arrow { stroke: #7cf5ff; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
-      .title { fill: #f6f9ff; font-family: "Plus Jakarta Sans", sans-serif; font-size: 18px; font-weight: 600; }
+      .box { fill: rgba(37, 99, 235, 0.12); stroke: #2563eb; stroke-width: 2; }
+      .box-text { fill: #0f172a; font-family: "Plus Jakarta Sans", sans-serif; font-size: 14px; font-weight: 500; }
+      .label-text { fill: #475569; font-family: "Plus Jakarta Sans", sans-serif; font-size: 12px; }
+      .arrow { stroke: #2563eb; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .title { fill: #0f172a; font-family: "Plus Jakarta Sans", sans-serif; font-size: 18px; font-weight: 600; }
     </style>
     <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#7cf5ff" />
+      <polygon points="0 0, 10 3, 0 6" fill="#2563eb" />
     </marker>
   </defs>
+
+  <!-- White background -->
+  <rect x="0" y="0" width="800" height="500" fill="#ffffff"/>
 
   <!-- Title -->
   <text x="400" y="30" text-anchor="middle" class="title">Churn Prediction MLOps Pipeline</text>
@@ -68,7 +71,7 @@
 
   <!-- Features Box -->
   <g>
-    <rect x="50" y="400" width="600" height="70" rx="8" fill="rgba(255, 139, 209, 0.15)" stroke="#ff8bd1" stroke-width="2"/>
+    <rect x="50" y="400" width="600" height="70" rx="8" fill="rgba(124, 58, 237, 0.10)" stroke="#7c3aed" stroke-width="2"/>
     <text x="350" y="425" text-anchor="middle" class="box-text">Key Features</text>
     <text x="350" y="450" text-anchor="middle" class="label-text">Logistic Regression • LightGBM • XGBoost • Hyperparameter Tuning • 5-Fold CV • Docker • CI/CD</text>
   </g>
