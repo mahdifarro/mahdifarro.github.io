@@ -1,0 +1,78 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .box { fill: rgba(37, 99, 235, 0.12); stroke: #2563eb; stroke-width: 2; }
+      .box-text { fill: #0f172a; font-family: "Plus Jakarta Sans", sans-serif; font-size: 14px; font-weight: 500; }
+      .label-text { fill: #475569; font-family: "Plus Jakarta Sans", sans-serif; font-size: 12px; }
+      .arrow { stroke: #2563eb; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .title { fill: #0f172a; font-family: "Plus Jakarta Sans", sans-serif; font-size: 18px; font-weight: 600; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2563eb" />
+    </marker>
+  </defs>
+
+  <!-- White background -->
+  <rect x="0" y="0" width="800" height="500" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="title">Churn Prediction MLOps Pipeline</text>
+
+  <!-- Top Row -->
+  <!-- Data Source -->
+  <rect x="50" y="70" width="140" height="80" rx="8" class="box"/>
+  <text x="120" y="105" text-anchor="middle" class="box-text">Data Source</text>
+  <text x="120" y="125" text-anchor="middle" class="label-text">(IBM Dataset)</text>
+
+  <!-- Training Pipeline -->
+  <rect x="280" y="70" width="140" height="80" rx="8" class="box"/>
+  <text x="350" y="105" text-anchor="middle" class="box-text">Training</text>
+  <text x="350" y="125" text-anchor="middle" class="box-text">Pipeline</text>
+  <text x="350" y="143" text-anchor="middle" class="label-text">(src/train.py)</text>
+
+  <!-- MLflow Server -->
+  <rect x="510" y="70" width="140" height="80" rx="8" class="box"/>
+  <text x="580" y="105" text-anchor="middle" class="box-text">MLflow</text>
+  <text x="580" y="125" text-anchor="middle" class="box-text">Server</text>
+  <text x="580" y="143" text-anchor="middle" class="label-text">(Model Registry)</text>
+
+  <!-- Arrows Top Row -->
+  <path d="M 190 110 L 280 110" class="arrow"/>
+  <path d="M 420 110 L 510 110" class="arrow"/>
+
+  <!-- Down arrow from MLflow -->
+  <path d="M 580 150 L 580 210" class="arrow"/>
+
+  <!-- Bottom Row -->
+  <!-- Frontend -->
+  <rect x="50" y="250" width="140" height="80" rx="8" class="box"/>
+  <text x="120" y="285" text-anchor="middle" class="box-text">Frontend</text>
+  <text x="120" y="305" text-anchor="middle" class="box-text">(External)</text>
+
+  <!-- FastAPI -->
+  <rect x="280" y="250" width="140" height="80" rx="8" class="box"/>
+  <text x="350" y="285" text-anchor="middle" class="box-text">FastAPI</text>
+  <text x="350" y="305" text-anchor="middle" class="box-text">API</text>
+  <text x="350" y="323" text-anchor="middle" class="label-text">(api/main.py)</text>
+
+  <!-- Model Loading -->
+  <rect x="510" y="250" width="140" height="80" rx="8" class="box"/>
+  <text x="580" y="285" text-anchor="middle" class="box-text">Model</text>
+  <text x="580" y="305" text-anchor="middle" class="box-text">Loading</text>
+  <text x="580" y="323" text-anchor="middle" class="label-text">(Registry)</text>
+
+  <!-- Arrows Bottom Row -->
+  <path d="M 190 290 L 280 290" class="arrow"/>
+  <path d="M 420 290 L 510 290" class="arrow"/>
+
+  <!-- Vertical connections -->
+  <path d="M 350 210 L 350 250" class="arrow"/>
+  <path d="M 580 210 L 580 250" class="arrow"/>
+
+  <!-- Features Box -->
+  <g>
+    <rect x="50" y="400" width="600" height="70" rx="8" fill="rgba(124, 58, 237, 0.10)" stroke="#7c3aed" stroke-width="2"/>
+    <text x="350" y="425" text-anchor="middle" class="box-text">Key Features</text>
+    <text x="350" y="450" text-anchor="middle" class="label-text">Logistic Regression • LightGBM • XGBoost • Hyperparameter Tuning • 5-Fold CV • Docker • CI/CD</text>
+  </g>
+</svg>
