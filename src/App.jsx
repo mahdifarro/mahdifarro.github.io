@@ -134,7 +134,6 @@ const sections = [
   { id: "about", label: "About" },
   { id: "projects", label: "Projects" },
   { id: "publications", label: "Publications" },
-  { id: "cv", label: "CV" },
   { id: "honors", label: "Honors" },
   { id: "contact", label: "Contact" }
 ];
@@ -426,6 +425,33 @@ function App() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        <section id="publications" className="section">
+          <div className="section__title">Publications</div>
+          <div className="section__body">
+            <div className="list">
+              {publications.map((pub, idx) => (
+                <div key={idx}>
+                  <a className="link" href={pub.link} target="_blank" rel="noreferrer">
+                    {pub.title}
+                  </a>
+                  <p style={{ color: "var(--muted)", fontSize: "14px", margin: "4px 0 0 0" }}>
+                    {pub.venue}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="honors" className="section">
+          <div className="section__title">Honors</div>
+          <div className="section__body">
+            <div className="list">
+              <div>Faculty of Graduate Studies International Master's Scholarship</div>
             </div>
           </div>
         </section>
