@@ -378,7 +378,12 @@ function App() {
                         ))}
                       </div>
                     </div>
-                    <p>{project.blurb}</p>
+                    {project.image && <img src={project.image} alt={project.name} className="card-image" />}
+                    <a className="card-github-link" href={project.link} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
+                      View on GitHub →
+                    </a>
+                    <div className="card-description">{project.description}</div>
+                    <p className="card-blurb">{project.blurb}</p>
                   </article>
                 ))}
               </div>

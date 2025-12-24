@@ -423,6 +423,12 @@ body.theme-light .nav {
   transition: all 0.2s ease;
 }
 
+.card .card-github-link,
+.card .card-description,
+.card .card-image {
+  display: none;
+}
+
 .card:hover { border-color: rgba(110, 231, 255, 0.6); transform: translateY(-2px); }
 
 .card--active { border-color: rgba(124, 58, 237, 0.7); box-shadow: var(--shadow); }
@@ -1004,22 +1010,36 @@ body.theme-light .scroll-to-top {
   .page { padding: 20px 18px 60px; }
   .hero { padding: 60px 18px; }
   .section { padding: 22px; }
-  .nav nav { gap: 8px; }
+  .nav { padding: 8px 12px; margin-bottom: 12px; }
+  .nav nav { gap: 6px; }
+  .nav a { padding: 6px 8px; font-size: 13px; }
+  .logo { width: 28px; height: 28px; font-size: 13px; }
   
-  /* Simplify projects for mobile */
-  .projects__drawer { padding: 14px; }
-  .project-image { height: 200px; margin-bottom: 12px; }
-  .projects__drawer h4 { font-size: 18px; margin-bottom: 4px; }
-  .projects__drawer .link { font-size: 14px; }
-  .projects__drawer p { font-size: 13px; line-height: 1.6; }
-  .tags { gap: 6px; }
-  .tags span { font-size: 12px; padding: 4px 8px; }
+  /* Simplify projects for mobile - hide drawer, show all projects as boxes */
+  .projects__drawer { display: none !important; }
+  .projects__grid { display: flex; flex-direction: column; gap: 20px; }
+  .card { cursor: default; padding: 24px !important; display: flex; flex-direction: column; min-height: 360px !important; justify-content: space-between; }
+  .card__header { flex-direction: column; align-items: flex-start; margin-bottom: 12px; }
+  .card__header h3 { font-size: 18px; margin: 0 0 10px 0; font-weight: 700; }
+  .card .card-image { display: none !important; }
+  .card .card-github-link { display: block !important; color: var(--accent); font-size: 13px; margin: 10px 0 0 0; text-decoration: none; font-weight: 600; }
+  .card .card-description { display: none !important; }
+  .card .card-blurb { display: block !important; font-size: 13px; line-height: 1.6; margin: 0 0 12px 0; color: var(--muted); }
+  .tags { gap: 8px; margin: 0; }
+  .tags span { font-size: 11px; padding: 5px 9px; }
   
-  /* Simplify timeline for mobile */
-  .timeline-item-content { padding: 10px 0 !important; }
-  .timeline__card { padding: 12px; }
-  .timeline__card h4 { font-size: 15px; margin-bottom: 4px; }
-  .experience-bullets { font-size: 12px; gap: 6px; }
-  .timeline-card-date { font-size: 12px; }
-  .timeline-date-badge { display: none; }
+  /* Simplify timeline for mobile - no alternating, just stacked boxes */
+  .timeline-unified { display: flex; flex-direction: column; gap: 16px; position: relative; }
+  .timeline-unified::before { display: none; }
+  .timeline-present-marker { position: static; margin-bottom: 12px; }
+  .timeline-item { display: block !important; grid-template-columns: none !important; }
+  .timeline-item-content { padding: 0 !important; display: block !important; }
+  .timeline-item-spacer { display: none !important; }
+  .timeline-center { display: none !important; }
+  .timeline-date-badge { display: none !important; }
+  .timeline__card { max-width: 100%; padding: 14px; }
+  .timeline__card h4 { font-size: 15px; margin-bottom: 6px; }
+  .timeline__card .timeline__expandable { max-height: none !important; opacity: 1 !important; margin-top: 8px !important; }
+  .timeline-card-date { font-size: 12px; font-weight: 600; color: var(--accent); margin-bottom: 4px; }
+  .experience-bullets { font-size: 12px; gap: 6px; margin-top: 8px; }
 }
