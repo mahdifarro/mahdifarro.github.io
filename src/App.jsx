@@ -10,7 +10,12 @@ const academicExperiences = [
     org: "University of Calgary",
     startDate: "Oct 2025",
     endDate: "Present",
-    bullets: ["Marking an exciting transition in research journey, exploring new directions in multisensory computing."],
+    bullets: [
+      "Developed and deployed full-stack web applications.",
+      "Designed and implemented backend APIs to support application functionality and data flow.",
+      "Built and managed user databases, enabling secure storage and efficient data retrieval.",
+      "Leveraged AWS services and large language models (LLMs) to automate document processing workflows, increasing the speed of legal case handling."
+    ],
     type: "academic"
   },
   {
@@ -18,7 +23,11 @@ const academicExperiences = [
     org: "Calgary, Canada",
     startDate: "Sep 2023",
     endDate: "Apr 2026",
-    bullets: ["Researched the application of AI for procedural content generation in games, leading to publications at international conferences (AIIDE 2025, AIIDE 2024, AVI 2024 Workshop)", "Implemented PCG repair Pipeline using Python, C#, and Machine Learning models, enhancing procedural content generation efficiency by 45%"],
+    bullets: [
+      "Designed and implemented an automated PCG repair pipeline using Python, C#, and machine learning models.",
+      "Developed ML-based techniques to detect and correct structural instabilities in generated game content, improving generation efficiency by 45%.",
+      "Publications: AIIDE 2025, AIIDE 2024, AVI 2024 Workshop."
+    ],
     type: "academic"
   },
   {
@@ -26,7 +35,9 @@ const academicExperiences = [
     org: "University of Tabriz",
     startDate: "Feb 2022",
     endDate: "Aug 2023",
-    bullets: ["Conducted research on and implemented models for Policy-Driven Active Learning combined with pseudo-labeling", "Utilized Python and PyTorch"],
+    bullets: [
+      "Conducted research on policy-driven active learning combined with pseudo-labeling using Python and PyTorch."
+    ],
     type: "academic"
   }
 ];
@@ -37,7 +48,12 @@ const industryExperiences = [
     org: "Calgary, Canada",
     startDate: "May 2024",
     endDate: "Sep 2025",
-    bullets: ["Developed a full-stack web dashboard for city planning data using JavaScript, PostgreSQL, and MongoDB, reducing system runtime by 35%", "Built a Unity-based visualization tool for a Digital Twin Model of the city, increasing user engagement"],
+    bullets: [
+      "Worked as part of an R&D and technical team on Digital Twin systems and their real-world applications.",
+      "Developed simulation and analysis tools using ArcGIS to support urban data insights.",
+      "Generated 3D models from aerial imagery and integrated them into ArcGIS and Unity for visualization.",
+      "Worked with city-scale databases to process and manage geospatial data."
+    ],
     type: "industry"
   },
   {
@@ -45,7 +61,9 @@ const industryExperiences = [
     org: "Istanbul, Turkey",
     startDate: "Sep 2021",
     endDate: "Jan 2022",
-    bullets: ["Developed mobile games for iOS and Android using C# and Unity in an Agile environment"],
+    bullets: [
+      "Developed mobile games for iOS and Android using C# and Unity in an Agile environment."
+    ],
     type: "industry"
   },
   {
@@ -53,7 +71,10 @@ const industryExperiences = [
     org: "Tehran, Iran",
     startDate: "Feb 2021",
     endDate: "Aug 2021",
-    bullets: ["Developed hyper-casual mobile games", "Created in-game video player plugin and integrated IAP & analytics services"],
+    bullets: [
+      "Developed hyper-casual mobile games with a focus on rapid prototyping and iteration.",
+      "Optimized ad placement and user experience, increasing ad revenue by ~40%."
+    ],
     type: "industry"
   }
 ];
