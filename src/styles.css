@@ -726,7 +726,7 @@ body.theme-light .nav {
   left: 50%;
   transform: translateX(-50%);
   width: 3px;
-  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  background: var(--accent);
   z-index: 1;
 }
 

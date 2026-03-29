@@ -17,7 +17,7 @@ const academicExperiences = [
     title: "Research Assistant at Serious Games Research Group",
     org: "Calgary, Canada",
     startDate: "Sep 2023",
-    endDate: "Present",
+    endDate: "Apr 2026",
     bullets: ["Researched the application of AI for procedural content generation in games, leading to publications at international conferences (AIIDE 2025, AIIDE 2024, AVI 2024 Workshop)", "Implemented PCG repair Pipeline using Python, C#, and Machine Learning models, enhancing procedural content generation efficiency by 45%"],
     type: "academic"
   },
@@ -267,6 +267,7 @@ function App() {
                   <span className="pill">Java</span>
                   <span className="pill">JavaScript</span>
                   <span className="pill">HTML</span>
+                  <span className="pill">SQL</span>
                 </div>
               </div>
               <div className="skill-category">
@@ -279,6 +280,8 @@ function App() {
                   <span className="pill">Reinforcement Learning</span>
                   <span className="pill">LLMs</span>
                   <span className="pill">Signal Processing</span>
+                  <span className="pill">LangChain</span>
+                  <span className="pill">Gradio</span>
                 </div>
               </div>
               <div className="skill-category">
@@ -297,6 +300,7 @@ function App() {
                   <span className="pill">Pandas</span>
                   <span className="pill">OpenCV</span>
                   <span className="pill">Matplotlib</span>
+                  <span className="pill">Tableau</span>
                 </div>
               </div>
               <div className="skill-category">
@@ -304,6 +308,8 @@ function App() {
                 <div className="pillrow">
                   <span className="pill">PostgreSQL</span>
                   <span className="pill">MongoDB</span>
+                  <span className="pill">MySQL</span>
+                  <span className="pill">PostGIS</span>
                 </div>
               </div>
               <div className="skill-category">
@@ -315,6 +321,10 @@ function App() {
                   <span className="pill">Azure</span>
                   <span className="pill">MLflow</span>
                   <span className="pill">Kubernetes</span>
+                  <span className="pill">AWS S3</span>
+                  <span className="pill">AWS EC2</span>
+                  <span className="pill">AWS Textract</span>
+                  <span className="pill">AWS Bedrock</span>
                 </div>
               </div>
               <div className="skill-category">
