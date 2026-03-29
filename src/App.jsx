@@ -90,14 +90,6 @@ const base = import.meta.env.BASE_URL || "/";
 
 const projects = [
   {
-    name: "Personal Portfolio",
-    blurb: "Responsive portfolio website showcasing projects, experiences, and publications; built with React, Vite, and GSAP animations.",
-    description: "• Built a modern, responsive portfolio website using React and Vite with smooth animations powered by GSAP.\n• Implemented dark/light theme toggle with smooth transitions and accent colors.\n• Deployed on GitHub Pages with smooth scrolling, project spotlight drawer, and comprehensive experience timeline.",
-    tags: ["React", "Vite", "GSAP", "CSS", "GitHub Pages"],
-    link: "https://github.com/mahdifarro/mahdifarro.github.io",
-    image: `${base}website.png`
-  },
-  {
     name: "Churn Prediction Pipeline",
     blurb:
       "End-to-end churn ML pipeline with preprocessing, training, and evaluation; tracked in MLflow; deployed via FastAPI + Docker with CI/CD.",
@@ -105,6 +97,14 @@ const projects = [
     tags: ["FastAPI", "Docker", "MLflow", "CI/CD"],
     link: "https://github.com/mahdifarro/churn-prediction",
     image: `${base}churn_prediction_architecture_whitebg.svg`
+  },
+  {
+    name: "Personal Portfolio",
+    blurb: "Responsive portfolio website showcasing projects, experiences, and publications; built with React, Vite, and GSAP animations.",
+    description: "• Built a modern, responsive portfolio website using React and Vite with smooth animations powered by GSAP.\n• Implemented dark/light theme toggle with smooth transitions and accent colors.\n• Deployed on GitHub Pages with smooth scrolling, project spotlight drawer, and comprehensive experience timeline.",
+    tags: ["React", "Vite", "GSAP", "CSS", "GitHub Pages"],
+    link: "https://github.com/mahdifarro/mahdifarro.github.io",
+    image: `${base}website.png`
   },
   {
     name: "LLM Text Summarizer",
