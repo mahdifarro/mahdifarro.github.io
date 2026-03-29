@@ -253,9 +253,9 @@ function App() {
           <div className="section__title">About</div>
           <div className="section__body">
             <p>
-              Machine Learning and Software Engineer (M.Sc. Computer Science) building user-facing software across web,
-              cloud, and applied AI. Hands-on with designing, testing, debugging, and deploying end-to-end systems using
-              FastAPI, Docker, and cloud platforms, with a focus on quality, performance, and maintainability.
+              Machine Learning and Software Engineer with an M.Sc. in Computer Science,
+              focused on data-driven systems and applied AI. Experienced in building end-to-end machine learning pipelines
+              and user-facing applications across web and cloud platforms, with strong emphasis on scalability, performance, and maintainability.
             </p>
             <div className="skills-section">
               <div className="skill-category">
@@ -475,6 +475,8 @@ function App() {
           <div className="section__body">
             <div className="list">
               <div>Faculty of Graduate Studies International Master's Scholarship</div>
+              <div>International Graduate Tuition Award</div>
+              <div>Mitacs Business Strategy Internship</div>
             </div>
           </div>
         </section>
