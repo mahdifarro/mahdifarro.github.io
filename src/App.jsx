@@ -298,6 +298,7 @@ function App() {
                   <span className="pill">TensorFlow</span>
                   <span className="pill">Scikit-learn</span>
                   <span className="pill">Computer Vision</span>
+                  <span className="pill">Natural Language Processing</span>
                   <span className="pill">Reinforcement Learning</span>
                   <span className="pill">LLMs</span>
                   <span className="pill">Signal Processing</span>
