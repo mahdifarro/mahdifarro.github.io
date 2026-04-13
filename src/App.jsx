@@ -123,6 +123,17 @@ const projects = [
     image: `${base}time_series_analysis.png`
   },
   {
+    name: "Legal Document Extraction Platform",
+    blurb: "Full-stack platform for extracting structured legal data from court awards using AWS Textract, Bedrock, and LLMs.",
+    description:
+      "• Built a full-stack legal document extraction platform to process court awards and populate structured legal templates automatically.\n" +
+      "• Integrated OCR and LLM pipelines using AWS Textract and Bedrock to extract structured legal information from unstructured documents.\n" +
+      "• Implemented secure user authentication and database-backed storage for accounts, uploaded files, and generated legal records.",
+    tags: ["Python", "AWS Textract", "AWS Bedrock", "LangChain", "Gradio", "PostgreSQL"],
+    link: "https://mahdifarro.github.io/#projects",
+    image: `${base}legal_website.png`
+  },
+  {
     name: "RL Agents: Humming Bird & Flappy Bird",
     blurb: "Reinforcement/imitation learning agents using Unity ML-Agents; focused on flight stability and control.",
     description: "• Developed reinforcement learning agents using imitation learning and Unity ML-Agents.\n• Focused on training agents for flight stability and control in challenging game environments.",
