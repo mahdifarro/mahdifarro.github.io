@@ -394,9 +394,11 @@ function App() {
                 <img src={activeProject.image} alt={activeProject.name} className="project-image" />
               )}
               <h4>{activeProject?.name}</h4>
-              <a className="link" href={activeProject?.link} target="_blank" rel="noreferrer">
-                View on GitHub →
-              </a>
+              {activeProject?.link && (
+                <a className="link" href={activeProject.link} target="_blank" rel="noreferrer">
+                  View on GitHub →
+                </a>
+              )}
               <p>{activeProject?.description}</p>
               <div className="tags">
                 {activeProject?.tags.map((tag) => (
@@ -421,9 +423,11 @@ function App() {
                       </div>
                     </div>
                     {project.image && <img src={project.image} alt={project.name} className="card-image" />}
-                    <a className="card-github-link" href={project.link} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
-                      View on GitHub →
-                    </a>
+                    {project.link && (
+                      <a className="card-github-link" href={project.link} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
+                        View on GitHub →
+                      </a>
+                    )}
                     <div className="card-description">{project.description}</div>
                     <p className="card-blurb">{project.blurb}</p>
                   </article>
