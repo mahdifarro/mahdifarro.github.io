@@ -90,6 +90,16 @@ const base = import.meta.env.BASE_URL || "/";
 
 const projects = [
   {
+  name: "Legal Document Extraction Platform",
+  blurb: "Full-stack platform for extracting structured legal data from court awards using AWS Textract, Bedrock, and LLMs.",
+  description:
+    "• Built a full-stack legal document extraction platform to process court awards and populate structured legal templates automatically.\n" +
+    "• Integrated OCR and LLM pipelines using AWS Textract and Bedrock to extract structured legal information from unstructured documents.\n" +
+    "• Implemented secure user authentication and database-backed storage for accounts, uploaded files, and generated legal records.",
+  tags: ["Python", "AWS Textract", "AWS Bedrock", "LangChain", "Gradio", "PostgreSQL"],
+  image: `${base}legal_website.png`
+  },
+  {
     name: "Churn Prediction Pipeline",
     blurb:
       "End-to-end churn ML pipeline with preprocessing, training, and evaluation; tracked in MLflow; deployed via FastAPI + Docker with CI/CD.",
@@ -121,17 +131,6 @@ const projects = [
     tags: ["Python", "Time-series", "Sentiment", "Selenium"],
     link: "https://github.com/mahdifarro/stock_market_prediction",
     image: `${base}time_series_analysis.png`
-  },
-  {
-    name: "Legal Document Extraction Platform",
-    blurb: "Full-stack platform for extracting structured legal data from court awards using AWS Textract, Bedrock, and LLMs.",
-    description:
-      "• Built a full-stack legal document extraction platform to process court awards and populate structured legal templates automatically.\n" +
-      "• Integrated OCR and LLM pipelines using AWS Textract and Bedrock to extract structured legal information from unstructured documents.\n" +
-      "• Implemented secure user authentication and database-backed storage for accounts, uploaded files, and generated legal records.",
-    tags: ["Python", "AWS Textract", "AWS Bedrock", "LangChain", "Gradio", "PostgreSQL"],
-    link: "https://mahdifarro.github.io/#projects",
-    image: `${base}legal_website.png`
   },
   {
     name: "RL Agents: Humming Bird & Flappy Bird",
